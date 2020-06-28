@@ -1,0 +1,288 @@
+*:focus {
+  outline: none;
+  box-sizing: border-box;
+}
+
+body, p {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrap-main {
+  margin: 100px auto 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 607px);
+  grid-gap: 34px;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .wrap-main {
+    display: block;
+  }
+}
+
+.wrap-card {
+  width: 573px;
+  padding: 40px 20px 25px 20px;
+  background: #F8FAFC;
+  border-radius: 25px;
+}
+
+@media (max-width: 700px) {
+  .wrap-card {
+    width: 320px;
+    margin: 20px auto;
+  }
+}
+
+.wrap-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.card__new {
+  width: 71px;
+  height: 26px;
+  padding-top: 8px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(248.16deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card__img {
+  transition: 0.3s;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.card__img:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.card__icon-elipse {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+.card__icon-balance {
+  padding-top: 5px;
+}
+
+.card__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #2C2C2C;
+}
+
+.card__text {
+  margin-bottom: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2C2C2C;
+}
+
+.card__item-price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.card__goods {
+  display: flex;
+  justify-content: space-evenly;
+  width: 92px;
+  height: 39px;
+  background: #E2E9F0;
+  border-radius: 30px;
+}
+
+.card__minus,
+.card__plus {
+  width: 10px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.card__count {
+  padding-top: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.card__btn {
+  width: 302px;
+  height: 39px;
+  background: linear-gradient(221.35deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 700px) {
+  .card__btn {
+    width: 200px;
+  }
+}
+
+.card__btn:hover {
+  background: #fff;
+  color: #CF9E1F;
+  border: 1px solid #CF9E1F;
+}
+
+.card__btn:active {
+  background: #fff;
+  color: green;
+  border: 1px solid green;
+}
+
+/* styles for custom select */
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #fff;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.select-selected.select-arrow-active:after {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+}
+
+.select-items div,.select-selected {
+  color:#2C2C2C;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background: #F3F8FC;
+  border-radius: 0px 10px 10px 0px;
+  width: 80%;
+}
+
+/* styles for checkbox */
+
+.card__checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.card__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #DEDEDE;
+  border-radius: 5px;
+}
+
+.card__checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 17px;
+  height: 17px;
+  left: 2.5px;
+  top: 2.5px;
+  background: linear-gradient(261.65deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
+  border-radius: 5px;
+}
+
+.card__checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
